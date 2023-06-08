@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "base\\": "vendor/base",
+      "app\\": "app"
+    }
+  },
+  "require": {
+    "gabordemooij/redbean": "v5.7.4",
+    "vlucas/valitron": "^1.4",
+    "ext-mbstring": "*"
+  }
+}

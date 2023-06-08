@@ -1,0 +1,335 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+input[type=submit],
+button {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url(../fonts/HelveticaNeue/HelveticaNeueRegular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url(../fonts/FontAwesome/fontawesome-webfont.ttf) format("truetype");
+}
+html, body {
+  height: 100%;
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 0.95rem;
+  color: #303030;
+  line-height: 1;
+}
+
+.admin {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  background: #F0F0F0;
+  overflow: auto;
+}
+.admin .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  background: #F8F8F8;
+}
+.admin .wrapper header {
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #e0eafb;
+}
+.admin .wrapper header ul {
+  display: flex;
+  align-items: center;
+}
+.admin .wrapper header ul li {
+  display: flex;
+  margin-right: 1.5rem;
+  color: #496AA3;
+  font-size: 0.95rem;
+}
+.admin .wrapper header .language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  color: #303030;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+.admin .wrapper header .languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.admin .wrapper header .languages .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  color: #303030;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+.admin .wrapper main {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+.admin .wrapper main .additives {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  padding: 2rem;
+}
+.admin .wrapper main .additives .wrap {
+  display: flex;
+  align-items: center;
+}
+.admin .wrapper main .additives .wrap h1 {
+  font-size: 1.2rem;
+}
+.admin .wrapper main .additives .wrap span {
+  font-size: 0.85rem;
+  margin-left: 1rem;
+}
+.admin .wrapper main .additives ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.admin .wrapper main .additives ul li {
+  display: flex;
+  flex: 0 0 calc((100% - 2rem) / 4);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.25rem;
+  padding: 1rem;
+  border: 1px solid #ADB3BC;
+}
+.admin .wrapper main .additive {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+.admin .wrapper main .additive .wrap {
+  display: flex;
+}
+.admin .wrapper main .additive .wrap input[name=publish] {
+  display: none;
+}
+.admin .wrapper main .additive .wrap input[name=publish] ~ label {
+  margin-left: auto;
+}
+.admin .wrapper main .additive .wrap input[name=publish] ~ label:after {
+  content: "НЕ ОПУБЛИКОВАНО";
+  color: orangered;
+  cursor: pointer;
+}
+.admin .wrapper main .additive .wrap input[name=publish]:checked ~ label:after {
+  content: "ОПУБЛИКОВАНО";
+  color: limegreen;
+}
+.admin .wrapper main .additive .errors {
+  margin-top: 1rem;
+}
+.admin .wrapper main .additive .errors ul li {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  color: orangered;
+}
+.admin .wrapper main .additive h1 {
+  font-size: 1rem;
+}
+.admin .wrapper main .additive h2 {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+.admin .wrapper main .additive h3 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-top: 1.5rem;
+}
+.admin .wrapper main .additive label.h2 {
+  display: flex;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+.admin .wrapper main .additive label.h3 {
+  display: flex;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.admin .wrapper main .additive .required::after {
+  content: "*";
+  color: orangered;
+  font-weight: bold;
+  margin-left: 0.25rem;
+}
+.admin .wrapper main .additive .auto {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  line-height: 1.2;
+  min-height: 2.7rem;
+  background: #e0eafb;
+  margin-top: 1rem;
+}
+.admin .wrapper main .additive input[type=text] {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  min-height: 2.7rem;
+  border: 1px solid #496AA3;
+  background: white;
+  margin-top: 1rem;
+}
+.admin .wrapper main .additive input[type=text].auto {
+  background: #e0eafb;
+}
+.admin .wrapper main .additive input[type=text].minor {
+  border: 1px solid #ADB3BC;
+}
+.admin .wrapper main .additive ul.functions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.admin .wrapper main .additive ul.functions li {
+  display: flex;
+  margin: 0.25rem;
+}
+.admin .wrapper main .additive ul.functions li label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 0.75rem;
+  border: 1px solid #ADB3BC;
+  padding: 1rem;
+}
+.admin .wrapper main .additive ul.functions li label:hover {
+  color: #707070;
+}
+.admin .wrapper main .additive ul.functions li input[type=checkbox]:checked ~ label {
+  background: #E9F0FD;
+}
+.admin .wrapper main .additive ul.functions li input[type=checkbox] {
+  display: none;
+}
+.admin .wrapper main .additive ul.safety {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.admin .wrapper main .additive ul.safety li {
+  display: flex;
+  min-width: 10rem;
+  margin: 0.25rem;
+}
+.admin .wrapper main .additive ul.safety li label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 0.75rem;
+  border: 1px solid #ADB3BC;
+  padding: 1rem;
+}
+.admin .wrapper main .additive ul.safety li label img {
+  margin-bottom: 0.5rem;
+}
+.admin .wrapper main .additive ul.safety li label:hover {
+  color: #707070;
+}
+.admin .wrapper main .additive ul.safety li input[type=radio]:checked ~ label {
+  background: #E9F0FD;
+}
+.admin .wrapper main .additive ul.safety li input[type=radio] {
+  display: none;
+}
+.admin .wrapper main .additive textarea {
+  display: flex;
+  flex: 1 0 100%;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  min-height: 20rem;
+  line-height: 1.5;
+  border: 1px solid #496AA3;
+}
+.admin .wrapper main .additive input[type=submit] {
+  padding: 1rem 1.5rem;
+  color: #e0eafb;
+  background: #496AA3;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.admin .wrapper main .additive input[type=submit]:hover {
+  background: #6d88b5;
+}
+
+.hide-js {
+  display: none !important;
+}
+
+/*# sourceMappingURL=admin.css.map */

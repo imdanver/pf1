@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+input[type=submit],
+button {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url(../fonts/HelveticaNeue/HelveticaNeueRegular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url(../fonts/FontAwesome/fontawesome-webfont.ttf) format("truetype");
+}
+html, body {
+  height: 100%;
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 0.95rem;
+  color: #303030;
+  line-height: 1;
+}
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+.auth .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  background: #F8F8F8;
+}
+.auth .login form {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  border-radius: 0.25rem;
+  background: #e0eafb;
+}
+.auth .login form input[type=email], .auth .login form input[type=password] {
+  min-width: 15rem;
+  padding: 0.65rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  background: white;
+}
+.auth .login form .errors {
+  margin-top: 1rem;
+}
+.auth .login form .errors ul li {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  color: orangered;
+}
+.auth .login form input[type=submit] {
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.25rem;
+  background: #496AA3;
+  color: #e0eafb;
+}
+.auth .login form input[type=submit]:hover {
+  background: #6d88b5;
+}
+
+/*# sourceMappingURL=auth.css.map */

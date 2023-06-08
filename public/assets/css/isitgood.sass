@@ -1,0 +1,286 @@
+@import "main"
+
+$theme-color: #32CD32
+
+.isitgood
+  display: flex
+  justify-content: center
+  flex: 1
+  height: 100%
+  background: #F8F8F8
+  overflow: auto
+  h1
+    font-size: 1.4rem
+    font-weight: normal
+  h2
+    font-size: 1.2rem
+    font-weight: normal
+  .wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+    height: fit-content
+    width: 100%
+    background: white
+    header
+      display: flex
+      padding: 1rem 2rem
+      background: $theme-color
+      color: white
+      div
+        display: flex
+        align-items: center
+      div
+        a
+          font-size: 1rem
+      ul
+        display: none
+        li
+          display: flex
+          align-items: center
+          a
+            margin-left: 1rem
+            font-size: $font-size-main
+            line-height: 1
+      .burger-btn
+        //display: none
+        margin-left: 2rem
+        cursor: pointer
+        i
+          font-size: 1.8rem
+      .language
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: auto
+        cursor: pointer
+        width: 2rem
+        height: 2rem
+        background: white
+        color: $color-main
+        border-radius: 50%
+        font-size: .8rem
+      .languages
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: auto
+        //font-size: 1rem
+        .item
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-left: 1rem
+          cursor: pointer
+          width: 2rem
+          height: 2rem
+          background: white
+          color: $color-main
+          border-radius: 50%
+          font-size: .8rem
+    nav .nav_ul
+        background: $theme-color
+        color: white
+        li
+          padding: .5rem 1rem
+          border-top: 1px solid white
+    footer
+      display: flex
+      padding: 1rem
+      background: $theme-color
+      color: white
+      span
+        line-height: 1.2
+      span:first-child
+        margin-right: 1rem
+      span:last-child
+        font-size: .75rem
+        margin-right: 1rem
+    main
+      display: flex
+      flex: 1
+      .additives
+        display: flex
+        flex-direction: column
+        flex: 1
+        width: 100%
+        padding: 2rem
+        h1
+          margin-top: 2rem
+        ul.additives_ul
+          display: flex
+          flex-direction: column
+          margin-top: 2rem
+          li
+            display: flex
+            flex: 1
+            div
+              display: flex
+              align-items: center
+            a
+              padding: 1rem
+              width: 100%
+            a:hover
+              color: #707070
+          li:nth-child(odd)
+            background: #F8F8F8
+      .additive
+        display: flex
+        flex-direction: column
+        flex: 1
+        width: 100%
+        padding: 2rem
+        .title
+          display: flex
+          align-items: center
+          margin-top: 2rem
+          div
+            margin-right: 1rem
+        .desc
+          font-size: .75rem
+          color: #D0D0D0
+          background: #F8F8F8
+          margin-top: 2rem
+          padding: .5rem
+        .functions
+          margin-top: 2rem
+          .functions-items
+            display: flex
+            flex-wrap: wrap
+            margin-top: 1rem
+            .functions-item
+              display: flex
+              padding: .75rem
+              background: #F0F0F0
+              margin: .25rem .25rem 0 0
+        h2
+          margin-top: 2rem
+        .text
+          p
+            line-height: 1.8
+            margin-top: 1rem
+          ul
+            margin-top: .5rem
+            li
+              line-height: 1.8
+            li::before
+              content: "\f111"
+              font-family: FontAwesome
+              font-size: .6rem
+              margin: 0 .5rem 0
+              color: #C0C0C0
+      .category
+        display: flex
+        flex-direction: column
+        flex: 1
+        width: 100%
+        padding: 2rem
+        h1
+          margin-top: 2rem
+        ul.category_ul
+          display: flex
+          flex-direction: column
+          margin-top: 2rem
+          li
+            display: flex
+            flex: 1
+            div
+              display: flex
+              align-items: center
+            a
+              padding: 1rem
+              width: 100%
+            a:hover
+              color: #707070
+          li:nth-child(odd)
+            background: #F8F8F8
+      .categories
+        display: flex
+        flex-direction: column
+        flex: 1
+        width: 100%
+        padding: 2rem
+        h1
+          margin-top: 2rem
+        .ul_categories
+          display: flex
+          flex-direction: column
+          margin-top: 2rem
+          li
+            display: flex
+            flex: 1
+            a
+              padding: 1rem
+              width: 100%
+            a:hover
+              color: #707070
+          li:nth-child(odd)
+            background: #F8F8F8
+      .error-404
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex: 1
+        min-height: 100%
+        padding: 2rem
+        .img
+          display: flex
+          width: 10rem
+          max-width: 50%
+          img
+            width: 100%
+            object-fit: contain
+        .title
+          font-size: 2rem
+          color: #F15B42
+          margin-top: 2rem
+        .text
+          color: #F15B42
+          font-size: 1rem
+          margin-top: 2rem
+        button
+          padding: 1rem
+          margin-top: 2rem
+          color: white
+          background: #108510
+        button:hover
+          background: #409d40
+  .breadcrumbs
+    display: flex
+    align-items: center
+    ul
+      display: flex
+      height: 100%
+      margin: 0
+      li
+        display: flex
+        align-items: center
+        line-height: 1
+        margin: 0
+        padding: .25rem .5rem .25rem 0
+      li:before
+        content: ''
+        margin: 0
+      li:after
+        content: '\f0da'
+        font-family: FontAwesome
+        font-size: 1rem
+        margin-left: .5rem
+        color: #C0C0C0
+      li:last-child:after
+        content: ''
+        margin: 0
+@media all and (min-width : 900px)
+  .isitgood
+    .wrapper
+      width: 900px
+@media all and (min-width : 480px)
+  .burger-btn
+    display: none !important
+  header ul
+    display: flex !important
+
+.hide-js
+  //display: none
+  display: none !important

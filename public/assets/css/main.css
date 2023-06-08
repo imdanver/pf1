@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input[type=text] {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url(../fonts/HelveticaNeue/HelveticaNeueRegular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url(../fonts/FontAwesome/fontawesome-webfont.ttf) format("truetype");
+}
+html, body {
+  height: 100%;
+  font-family: "HelveticaNeue", sans-serif;
+  line-height: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

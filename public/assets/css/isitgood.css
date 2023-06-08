@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+input[type=submit],
+button {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url(../fonts/HelveticaNeue/HelveticaNeueRegular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url(../fonts/FontAwesome/fontawesome-webfont.ttf) format("truetype");
+}
+html, body {
+  height: 100%;
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 0.95rem;
+  color: #303030;
+  line-height: 1;
+}
+
+.isitgood {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  background: #F8F8F8;
+  overflow: auto;
+}
+.isitgood h1 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.isitgood h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.isitgood .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  height: fit-content;
+  width: 100%;
+  background: white;
+}
+.isitgood .wrapper header {
+  display: flex;
+  padding: 1rem 2rem;
+  background: #32CD32;
+  color: white;
+}
+.isitgood .wrapper header div {
+  display: flex;
+  align-items: center;
+}
+.isitgood .wrapper header div a {
+  font-size: 1rem;
+}
+.isitgood .wrapper header ul {
+  display: none;
+}
+.isitgood .wrapper header ul li {
+  display: flex;
+  align-items: center;
+}
+.isitgood .wrapper header ul li a {
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+.isitgood .wrapper header .burger-btn {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.isitgood .wrapper header .burger-btn i {
+  font-size: 1.8rem;
+}
+.isitgood .wrapper header .language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  color: #303030;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+.isitgood .wrapper header .languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.isitgood .wrapper header .languages .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  color: #303030;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+.isitgood .wrapper nav .nav_ul {
+  background: #32CD32;
+  color: white;
+}
+.isitgood .wrapper nav .nav_ul li {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid white;
+}
+.isitgood .wrapper footer {
+  display: flex;
+  padding: 1rem;
+  background: #32CD32;
+  color: white;
+}
+.isitgood .wrapper footer span {
+  line-height: 1.2;
+}
+.isitgood .wrapper footer span:first-child {
+  margin-right: 1rem;
+}
+.isitgood .wrapper footer span:last-child {
+  font-size: 0.75rem;
+  margin-right: 1rem;
+}
+.isitgood .wrapper main {
+  display: flex;
+  flex: 1;
+}
+.isitgood .wrapper main .additives {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+.isitgood .wrapper main .additives h1 {
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .additives ul.additives_ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .additives ul.additives_ul li {
+  display: flex;
+  flex: 1;
+}
+.isitgood .wrapper main .additives ul.additives_ul li div {
+  display: flex;
+  align-items: center;
+}
+.isitgood .wrapper main .additives ul.additives_ul li a {
+  padding: 1rem;
+  width: 100%;
+}
+.isitgood .wrapper main .additives ul.additives_ul li a:hover {
+  color: #707070;
+}
+.isitgood .wrapper main .additives ul.additives_ul li:nth-child(odd) {
+  background: #F8F8F8;
+}
+.isitgood .wrapper main .additive {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+.isitgood .wrapper main .additive .title {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .additive .title div {
+  margin-right: 1rem;
+}
+.isitgood .wrapper main .additive .desc {
+  font-size: 0.75rem;
+  color: #D0D0D0;
+  background: #F8F8F8;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+.isitgood .wrapper main .additive .functions {
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .additive .functions .functions-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.isitgood .wrapper main .additive .functions .functions-items .functions-item {
+  display: flex;
+  padding: 0.75rem;
+  background: #F0F0F0;
+  margin: 0.25rem 0.25rem 0 0;
+}
+.isitgood .wrapper main .additive h2 {
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .additive .text p {
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+.isitgood .wrapper main .additive .text ul {
+  margin-top: 0.5rem;
+}
+.isitgood .wrapper main .additive .text ul li {
+  line-height: 1.8;
+}
+.isitgood .wrapper main .additive .text ul li::before {
+  content: "\f111";
+  font-family: FontAwesome;
+  font-size: 0.6rem;
+  margin: 0 0.5rem 0;
+  color: #C0C0C0;
+}
+.isitgood .wrapper main .category {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+.isitgood .wrapper main .category h1 {
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .category ul.category_ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .category ul.category_ul li {
+  display: flex;
+  flex: 1;
+}
+.isitgood .wrapper main .category ul.category_ul li div {
+  display: flex;
+  align-items: center;
+}
+.isitgood .wrapper main .category ul.category_ul li a {
+  padding: 1rem;
+  width: 100%;
+}
+.isitgood .wrapper main .category ul.category_ul li a:hover {
+  color: #707070;
+}
+.isitgood .wrapper main .category ul.category_ul li:nth-child(odd) {
+  background: #F8F8F8;
+}
+.isitgood .wrapper main .categories {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+.isitgood .wrapper main .categories h1 {
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .categories .ul_categories {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .categories .ul_categories li {
+  display: flex;
+  flex: 1;
+}
+.isitgood .wrapper main .categories .ul_categories li a {
+  padding: 1rem;
+  width: 100%;
+}
+.isitgood .wrapper main .categories .ul_categories li a:hover {
+  color: #707070;
+}
+.isitgood .wrapper main .categories .ul_categories li:nth-child(odd) {
+  background: #F8F8F8;
+}
+.isitgood .wrapper main .error-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 100%;
+  padding: 2rem;
+}
+.isitgood .wrapper main .error-404 .img {
+  display: flex;
+  width: 10rem;
+  max-width: 50%;
+}
+.isitgood .wrapper main .error-404 .img img {
+  width: 100%;
+  object-fit: contain;
+}
+.isitgood .wrapper main .error-404 .title {
+  font-size: 2rem;
+  color: #F15B42;
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .error-404 .text {
+  color: #F15B42;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+.isitgood .wrapper main .error-404 button {
+  padding: 1rem;
+  margin-top: 2rem;
+  color: white;
+  background: #108510;
+}
+.isitgood .wrapper main .error-404 button:hover {
+  background: #409d40;
+}
+.isitgood .breadcrumbs {
+  display: flex;
+  align-items: center;
+}
+.isitgood .breadcrumbs ul {
+  display: flex;
+  height: 100%;
+  margin: 0;
+}
+.isitgood .breadcrumbs ul li {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+}
+.isitgood .breadcrumbs ul li:before {
+  content: "";
+  margin: 0;
+}
+.isitgood .breadcrumbs ul li:after {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: #C0C0C0;
+}
+.isitgood .breadcrumbs ul li:last-child:after {
+  content: "";
+  margin: 0;
+}
+
+@media all and (min-width: 900px) {
+  .isitgood .wrapper {
+    width: 900px;
+  }
+}
+@media all and (min-width: 480px) {
+  .burger-btn {
+    display: none !important;
+  }
+  header ul {
+    display: flex !important;
+  }
+}
+.hide-js {
+  display: none !important;
+}
+
+/*# sourceMappingURL=isitgood.css.map */

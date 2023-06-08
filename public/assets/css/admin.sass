@@ -1,0 +1,222 @@
+@import "main"
+
+.admin
+  display: flex
+  justify-content: center
+  flex: 1
+  height: 100%
+  background: #F0F0F0
+  overflow: auto
+  .wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 70%
+    background: #F8F8F8
+    header
+      display: flex
+      width: 100%
+      padding: 1rem 2rem
+      background: #e0eafb
+      ul
+        display: flex
+        align-items: center
+        li
+          display: flex
+          margin-right: 1.5rem
+          color: #496AA3
+          font-size: $font-size-main
+      .language
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: auto
+        cursor: pointer
+        width: 2rem
+        height: 2rem
+        background: white
+        color: $color-main
+        border-radius: 50%
+        font-size: .8rem
+      .languages
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-left: auto
+        .item
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-left: 1rem
+          cursor: pointer
+          width: 2rem
+          height: 2rem
+          background: white
+          color: $color-main
+          border-radius: 50%
+          font-size: .8rem
+    main
+      display: flex
+      flex: 1
+      width: 100%
+      .additives
+        display: flex
+        flex-direction: column
+        flex: 1
+        height: 100%
+        padding: 2rem
+        .wrap
+          display: flex
+          align-items: center
+          h1
+            font-size: 1.2rem
+          span
+            font-size: .85rem
+            margin-left: 1rem
+        ul
+          display: flex
+          justify-content: flex-start
+          flex-wrap: wrap
+          margin-top: 1rem
+          li
+            display: flex
+            flex: 0 0 calc((100% - 2rem) / 4)
+            font-size: .85rem
+            line-height: 1.5
+            margin: .25rem
+            padding: 1rem
+            border: 1px solid #ADB3BC
+      .additive
+        display: flex
+        flex-direction: column
+        flex: 1
+        width: 100%
+        padding: 2rem
+        .wrap
+          display: flex
+          input[name="publish"]
+            display: none
+          input[name="publish"] ~ label
+            margin-left: auto
+          input[name="publish"] ~ label:after
+            content: "НЕ ОПУБЛИКОВАНО"
+            color: orangered
+            cursor: pointer
+          input[name="publish"]:checked ~ label:after
+            content: "ОПУБЛИКОВАНО"
+            color: limegreen
+        .errors
+          margin-top: 1rem
+          ul li
+            font-size: .75rem
+            padding: .25rem .5rem
+            color: orangered
+        h1
+          font-size: 1rem
+        h2
+          font-size: .8rem
+          margin-top: 2rem
+        h3
+          font-size: .8rem
+          font-weight: normal
+          margin-top: 1.5rem
+        label.h2
+          display: flex
+          font-weight: bold
+          font-size: .8rem
+          margin-top: 2rem
+        label.h3
+          display: flex
+          font-size: .8rem
+          margin-top: 1.5rem
+        .required::after
+          content: '*'
+          color: orangered
+          font-weight: bold
+          margin-left: .25rem
+        .auto
+          display: flex
+          align-items: center
+          padding: .75rem 1rem
+          line-height: 1.2
+          min-height: 2.7rem
+          background: #e0eafb
+          margin-top: 1rem
+        input[type="text"]
+          display: flex
+          align-items: center
+          width: 100%
+          padding: 0 1rem
+          min-height: 2.7rem
+          border: 1px solid #496AA3
+          background: white
+          margin-top: 1rem
+        input[type="text"].auto
+          background: #e0eafb
+        input[type="text"].minor
+          border: 1px solid #ADB3BC
+        ul.functions
+          display: flex
+          flex-wrap: wrap
+          margin-top: 1rem
+          li
+            display: flex
+            margin: .25rem
+            label
+              display: flex
+              justify-content: center
+              align-items: center
+              width: 100%
+              font-size: .75rem
+              border: 1px solid #ADB3BC
+              padding: 1rem
+            label:hover
+              color: #707070
+            input[type="checkbox"]:checked ~ label
+              background: #E9F0FD
+            input[type="checkbox"]
+              display: none
+        ul.safety
+          display: flex
+          flex-wrap: wrap
+          margin-top: 1rem
+          li
+            display: flex
+            min-width: 10rem
+            margin: .25rem
+            label
+              display: flex
+              flex-direction: column
+              align-items: center
+              width: 100%
+              font-size: .75rem
+              border: 1px solid #ADB3BC
+              padding: 1rem
+              img
+                margin-bottom: .5rem
+            label:hover
+              color: #707070
+            input[type="radio"]:checked ~ label
+              background: #E9F0FD
+            input[type="radio"]
+              display: none
+        textarea
+          display: flex
+          flex: 1 0 100%
+          width: 100%
+          padding: 1rem
+          margin-top: 1rem
+          min-height: 20rem
+          line-height: 1.5
+          border: 1px solid #496AA3
+        input[type="submit"]
+          padding: 1rem 1.5rem
+          color: #e0eafb
+          background: #496AA3
+          margin-top: 2rem
+          cursor: pointer
+        input[type="submit"]:hover
+          background: #6d88b5
+
+.hide-js
+  display: none !important
